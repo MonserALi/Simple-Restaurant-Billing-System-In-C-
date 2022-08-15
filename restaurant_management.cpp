@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/// Declare Class Question Number 1
+/// Declare Class 
 class Restaurant{
 public:
     int food_item_codes[12];
@@ -26,7 +26,7 @@ public:
     }
 };
 
-/// take input question Number 2
+/// take input 
 
 void take_input(int n,Restaurant *restaurant){
 
@@ -41,7 +41,7 @@ void take_input(int n,Restaurant *restaurant){
     }
 }
 
-///  Show all item details Question number 3
+///  Show all item details 
 void make_bill(Restaurant *restaurant,int n){
 
     cout<<endl<<string(35,' ')<<"Make Bill"<<endl;
@@ -52,7 +52,7 @@ void make_bill(Restaurant *restaurant,int n){
         cout<<restaurant->food_item_codes[i]<<string(20,' ')<<restaurant->food_item_names[i]<<string(34-z,' ')<<restaurant->food_item_prices[i]<<endl;
     }
 }
-/// Take Order from Customer Question Number 4
+/// Take Order from Customer
 void take_order(Restaurant *restaurant,int n){
     cout<<"\n\nEnter Table Number : ";
     int table_number;
@@ -86,7 +86,7 @@ void take_order(Restaurant *restaurant,int n){
         cout<<"Enter Item "<<i+1<<" Quantity : ";
         cin>>item_quantity[i];
     }
-    /// find all ordered item from  make bill Question Number 5
+    /// find all ordered item from  make bill 
 
        cout<<endl<<string(40,' ')<<"Bill Summary"<<endl;
     cout<<string(30,' ')<<"____________________________"<<endl;
@@ -102,14 +102,14 @@ void take_order(Restaurant *restaurant,int n){
                 }
             }
     }
-    /// Calculate 5% of tax and show in bill Summary Question Number 6
+    /// Calculate 5% of tax and show in bill Summary 
     double tax = grand_tatal*0.05;
     cout<<"TAX "<<string(82,' ')<<fixed<<setprecision(2)<<tax;
     double net_total = grand_tatal+tax;
     cout<<endl<<string(110,'_');
     cout<<"\nNet Total " <<string(75,' ')<<fixed<<setprecision(2) <<net_total<<"  Taka"<<endl;
 
-    /// add total tax to restaurant class Question Number 7
+    /// add total tax to restaurant class 
 
     restaurant->set_total_tax(tax);
 }
@@ -130,4 +130,47 @@ int main(){
 return 0;
 }
 
+/* 
+    sample Input data
+12
+170
+Chicken Soup 1:2
+260
+171
+Chicken Corn Soup 1:2
+200
+172
+Thai Special Soup 1:2
+300
+260
+Chicken Fried Rice 1:2
+250
+261
+Egg Fried Rice 1:2
+230
+262
+Prawn Fried Rice 1:2
+300
+310
+Beef Mutton Kabab 1:1
+150
+311
+Chicken Grill 1:4
+340
+450
+Chicken Curry 1:3
+550
+451
+Beef Special Curry 1:3
+760
+452
+Chicken Sizzling 1:3
+710
+453
+Beef Sizzling 1:3
+970
+
+
+
+*/
 
